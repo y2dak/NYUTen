@@ -1,4 +1,4 @@
-package com.example.andylin.nyuten;
+package com.nyuten.nyuten;
 
 import org.junit.Test;
 
