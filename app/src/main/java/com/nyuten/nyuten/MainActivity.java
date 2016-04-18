@@ -1,5 +1,7 @@
 package com.nyuten.nyuten;
 
+import com.nyuten.nyuten.Model.*;
+
 import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,6 +46,16 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
     boolean loggedIn;
     SharedPreferences sharedPreferences;
     SharedPreferences statuses;
+    /*
+    TODO
+    * April 18- Anderson Lin
+    * */
+    mLocation mLocDibner= new mLocation("Dibner",40.694575, -73.985779);
+    mLocation mLocChipotle= new mLocation("Chipotle",40.693651, -73.986403);
+    mLocation mLocGym= new mLocation("Gym",40.694399, -73.986746);
+    mLocation mLocCurrent = new mLocation();
+
+
     MarkerOptions dibner = new MarkerOptions().position(new LatLng(40.694575, -73.985779)).title("Dibner");
     MarkerOptions chipotle = new MarkerOptions().position(new LatLng(40.693651, -73.986403)).title("Chipotle");
     MarkerOptions gym = new MarkerOptions().position(new LatLng(40.694399, -73.986746)).title("Gym");
@@ -207,6 +219,11 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
             case R.id.updatebtn:
                 Intent j = new Intent(MainActivity.this, UpdateLocationActivity.class);
                 j.putExtra("name", currentLocation);
+                /*
+                * April 18- Anderson Lin
+                * */
+                //System.out.println(mLocCurrent);
+                j.putExtra("mLocation",mLocCurrent);
                 startActivity(j);
                 break;
         }
@@ -251,16 +268,25 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
     public boolean onMarkerClick(Marker marker) {
         //System.out.println(marker.getId() + " " + marker.getTitle());
         if(marker.getTitle().equals("Dibner")){
+            /*
+                * April 18- Anderson Lin
+                * */
+            mLocCurrent.setmLocation(mLocDibner);
+
             currentLocation = "Dibner";
             markerInfo.setVisibility(View.VISIBLE);
             markerTitle.setText("Dibner");
         }
         else if(marker.getTitle().equals("Chipotle")){
+
+            mLocCurrent.setmLocation(mLocChipotle);
+
             currentLocation = "Chipotle";
             markerInfo.setVisibility(View.VISIBLE);
             markerTitle.setText("Chipotle");
         }
         else{
+            mLocCurrent.setmLocation(mLocGym);
             currentLocation = "Gym";
             markerInfo.setVisibility(View.VISIBLE);
             markerTitle.setText("Gym");

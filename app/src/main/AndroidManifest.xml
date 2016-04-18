@@ -7,6 +7,13 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- added part-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:required="true"
+        android:name="android.hardware.location.gps"/>
+    <uses-feature android:required="true"
+        android:name="android.hardware.location.network"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,10 +31,20 @@
                     android:value="@integer/google_play_services_version" />
             </intent-filter>
         </activity>
+        <!-- added part
+        Registering Broadcast Receiving Manifest file
+        http://codetheory.in/android-broadcast-receivers/
+        -->
+        <receiver android:name=".GPS.LocationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.nyuten.nyuten.ACTION_LOCATION"/>
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAjCggpMk3moh9-_N7XNBaKXpip6L_kXag" />
+            android:value="AIzaSyA0euVORLuWs11vmYvd15lsMH5O7G_kR6o" />
 
         <activity
             android:name=".ViewLocationActivity"
