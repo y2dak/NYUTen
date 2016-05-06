@@ -1,49 +1,42 @@
 {
   "project_info": {
-    "project_id": "nyuten-1247",
-    "project_number": "208324019378",
-    "name": "NYUTen"
+    "project_number": "140605634037",
+    "project_id": "nyu-ten"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:208324019378:android:9217cf2885d87ee1",
-        "client_id": "android:com.nyuten.nyuten",
-        "client_type": 1,
+        "mobilesdk_app_id": "1:140605634037:android:9217cf2885d87ee1",
         "android_client_info": {
-          "package_name": "com.nyuten.nyuten",
-          "certificate_hash": []
+          "package_name": "com.nyuten.nyuten"
         }
       },
       "oauth_client": [
         {
-          "client_id": "208324019378-n5s6ndokt9qbeg9o2tdkh5io729mspg7.apps.googleusercontent.com",
+          "client_id": "140605634037-bp4bgqcf5846g2o96epituepmj50n30r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.nyuten.nyuten",
-            "certificate_hash": "3C59056F7DA9D74A748FF965FD69E488E3CB7679"
+            "certificate_hash": "CD4CC5705DA6C26A470B36190098A744378CFF14"
           }
         },
         {
-          "client_id": "208324019378-j66ppfoe4hfd9srhmghtbf8pntapibff.apps.googleusercontent.com",
+          "client_id": "140605634037-q08j94hah8v20evhnlnvv30uaaong40n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
-      "api_key": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yrN3vh06WM57RHK__JVKZbAihrbvihM"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
         },
-        "cloud_messaging_service": {
-          "status": 1,
-          "apns_config": []
-        },
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
-        },
-        "google_signin_service": {
-          "status": 2
         },
         "ads_service": {
           "status": 1
@@ -51,6 +44,5 @@
       }
     }
   ],
-  "client_info": [],
-  "ARTIFACT_VERSION": "1"
+  "configuration_version": "1"
 }
