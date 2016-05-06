@@ -1,0 +1,4 @@
+cron:
+- description: "query database every min"
+  url: /
+  schedule: every 10 mins

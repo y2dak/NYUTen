@@ -1,230 +1,458 @@
 [
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_update_location.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_update_location.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_chooser_dialog.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/content_view_location.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/content_view_location.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_login.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_list_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_icon.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar_include.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_view_location.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_view_location.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_menu_item_action_area.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_subheader.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_view_location.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_view_location.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/activity_login.xml"
     },
     {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/content_update_location.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/content_update_location.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/content_update_location.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/content_update_location.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/content_view_location.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/content_view_location.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/content_view_location.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/content_view_location.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_update_location.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/activity_update_location.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_update_location.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/layout/activity_update_location.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/activity_view_location.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/layout/activity_view_location.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_chooser_dialog.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_chooser_dialog.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_header.xml"
     }
 ]

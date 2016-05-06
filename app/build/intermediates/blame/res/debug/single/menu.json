@@ -1,14 +1,26 @@
 [
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_login.xml",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/menu/menu_login.xml"
-    },
-    {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/menu/menu_main.xml"
     },
     {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_view_location.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/menu/menu_view_location.xml"
+    },
+    {
+        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_login.xml",
+        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/menu/menu_login.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_login.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/menu/menu_login.xml"
+    },
+    {
         "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_view_location.xml",
         "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/menu/menu_view_location.xml"
+    },
+    {
+        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/menu/menu_main.xml"
     }
 ]

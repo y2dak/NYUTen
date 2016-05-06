@@ -7,6 +7,16 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- Google cloud messaging permissions -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="com.nyuten.nyuten.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.nyuten.nyuten.C2D_MESSAGE" />
+
+
     <!-- added part-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-feature android:required="true"
@@ -20,6 +30,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <service android:name=".GcmIntentService" />
+        <service android:name=".GcmIntentService2" />
+        <service android:name=".MyInstanceIDService" android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.nyuten.nyuten"/>
+            </intent-filter>
+        </receiver>
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,7 +70,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA0euVORLuWs11vmYvd15lsMH5O7G_kR6o" />
+            android:value="AIzaSyDKkHhlUHRBtlRRD8L6B5bf1e7jOKH5RAk"  />
 
         <activity
             android:name=".ViewLocationActivity"

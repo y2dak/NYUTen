@@ -5,17 +5,35 @@ import com.nyuten.nyuten.Model.*;
 
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 
 import android.content.Context;
 import android.location.Location;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 public class UpdateLocationActivity extends AppCompatActivity {
@@ -115,6 +133,7 @@ public class UpdateLocationActivity extends AppCompatActivity {
                     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
 
 
+
                     mRunManager.stopLocationUpdates();
                     finish();
                 }
@@ -122,7 +141,6 @@ public class UpdateLocationActivity extends AppCompatActivity {
         });
     }
     /*???*/
-
 
 
 
