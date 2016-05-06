@@ -1,15 +1,22 @@
 package com.nyuten.nyuten;
 
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.nyuten.nyuten.Model.*;
 
 import android.app.LoaderManager;
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -68,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
     Button update;
     String currentLocation;
 
+    private BroadcastReceiver br;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +114,29 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
             signInButton.setScopes(gso.getScopeArray());
             findViewById(R.id.sign_in_button).setOnClickListener(this);
         }
+
+        if(checkPlayServices()){
+            Intent intent=new Intent(this,GcmIntentService.class);
+            startService(intent);
+
+        }
+
+
+    }
+
+    private boolean checkPlayServices(){
+        int resultCode= GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if(resultCode!= ConnectionResult.SUCCESS) {
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)){
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this, 9000).show();
+            }
+            else{
+                Log.i(TAG, "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
     }
 
     private void signOut() {
@@ -136,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
         //getMenuInflater().inflate(R.menu.menu_main, null);
-;    }
+    }
     private void updateUI(boolean signedIn){
         if(signedIn){
             setContentView(mainActivity);
@@ -299,3 +331,4 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
         markerInfo.setVisibility(View.INVISIBLE);
     }
 }
+
