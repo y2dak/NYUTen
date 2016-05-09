@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]

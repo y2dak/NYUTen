@@ -1,25 +1,15 @@
 package com.nyuten.nyuten.GPS;
 
-import com.nyuten.nyuten.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
+import android.util.Log;
 
 /**
  * Created by andylin on 16/4/18.
  */
-
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.location.Location;
-import android.location.LocationManager;
-import android.util.Log;
-
-
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.location.Location;
-import android.location.LocationManager;
-import android.util.Log;
 
 /**
  * Created by andylin on 16/4/15.

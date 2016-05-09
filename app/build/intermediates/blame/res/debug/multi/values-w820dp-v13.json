@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,37 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/src/main/res/values-w820dp/dimens.xml",
+                    "file": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 291,
+                        "startOffset": 295,
                         "endColumn": 57,
-                        "endOffset": 344
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/src/main/res/values-w820dp/dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
+                        "endOffset": 348
                     }
                 }
             }

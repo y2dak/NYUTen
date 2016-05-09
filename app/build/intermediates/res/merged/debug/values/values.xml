@@ -37,9 +37,9 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#9575CD</color>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
@@ -370,8 +370,8 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
-    <string name="gcm_defaultSenderId" translatable="false">140605634037</string>
-    <string name="google_app_id" translatable="false">1:140605634037:android:9217cf2885d87ee1</string>
+    <string name="gcm_defaultSenderId" translatable="false">208324019378</string>
+    <string name="google_app_id" translatable="false">1:208324019378:android:9217cf2885d87ee1</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

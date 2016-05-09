@@ -146,7 +146,7 @@ public class RunManager {
         /*added page 559*/
         // Get the last known location and broadcast it if you have one
         if (ContextCompat.checkSelfPermission(mAppContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(mAppContext,Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+                || ContextCompat.checkSelfPermission(mAppContext, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)
         {
 
             // Get the last known location and broadcast it if you have one

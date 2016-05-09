@@ -3,10 +3,6 @@ package com.nyuten.nyuten.Model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import android.location.Address;
-import android.os.Parcel;
-import android.os.Parcelable;
-
 public class mLocation implements Parcelable {
 
     private String Location;
@@ -16,7 +12,7 @@ public class mLocation implements Parcelable {
     /**
      * Parcelable creator. Do not modify this function.
      */
-    public static final Parcelable.Creator<mLocation> CREATOR = new Parcelable.Creator<mLocation>() {
+    public static final Creator<mLocation> CREATOR = new Creator<mLocation>() {
         public mLocation createFromParcel(Parcel p) {
             return new mLocation(p);
         }

@@ -1,52 +1,53 @@
 package com.nyuten.nyuten;
-import com.nyuten.nyuten.GPS.LocationReceiver;
-import com.nyuten.nyuten.GPS.RunManager;
-import com.nyuten.nyuten.Model.*;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
+import android.graphics.BitmapFactory;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
-
-import android.content.Context;
-import android.location.Location;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.nyuten.nyuten.GPS.LocationReceiver;
+import com.nyuten.nyuten.GPS.RunManager;
+import com.nyuten.nyuten.Model.mLocation;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class UpdateLocationActivity extends AppCompatActivity {
-
-    //mLocation mLocCurrent = new mLocation();
     mLocation mLocCurrent ;
     private Location mLastLocation;
 
-
     String name;
+    String userId;
     RadioButton crowded;
     RadioButton notBad;
     RadioButton empty;
+    String status;
+    TextView atLocationtTxt;
+    boolean atLocation = false;
+
 
     float[] distance=new float[5];
     private RunManager mRunManager;
@@ -66,9 +67,13 @@ public class UpdateLocationActivity extends AppCompatActivity {
 
             Location.distanceBetween(loc.getLatitude(), loc.getLongitude(), mLocCurrent.getLat(), mLocCurrent.getLng(), distance);
             StringDistance =Float.toString(distance[0]);
+            if (distance[0] < 5){
+                atLocation = true;
+                atLocationtTxt.setText("You are at this location!");
+            }
             System.out.println("in the UpdateLocation class, the distance between from current to is " + StringDistance + "\n");
 
-            Toast.makeText(getApplication(), "Current distance from " + mLocCurrent.getLocation()+"is\n" + StringDistance + " meters", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplication(), "Current distance from " + mLocCurrent.getLocation() + " is\n" + StringDistance + " meters", Toast.LENGTH_LONG).show();
         }
         @Override
         protected void onProviderEnabledChanged(boolean enabled)
@@ -81,72 +86,127 @@ public class UpdateLocationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_update_location);
 
+        crowded = (RadioButton)findViewById(R.id.radioButton);
+        notBad = (RadioButton)findViewById(R.id.radioButton2);
+        empty = (RadioButton)findViewById(R.id.radioButton3);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        atLocationtTxt = (TextView) findViewById(R.id.atLocationTxt);
+        setSupportActionBar(toolbar);
 
 
         this.registerReceiver(mLocationReceiver,
                 new IntentFilter(RunManager.ACTION_LOCATION));
 
 
-        setContentView(R.layout.activity_update_location);
-        crowded = (RadioButton)findViewById(R.id.radioButton);
-        notBad = (RadioButton)findViewById(R.id.radioButton2);
-        empty = (RadioButton)findViewById(R.id.radioButton3);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        name = getIntent().getStringExtra("name");
+            name = getIntent().getStringExtra("name");
+            mLocCurrent = getIntent().getParcelableExtra("mLocation");
 
-        mLocCurrent = getIntent().getParcelableExtra("mLocation");
-        /*
-        if(mLocCurrent!=null)
-        System.out.println(mLocCurrent);
-        else
-        System.out.println("!!!!!!mLocCurrent is null!\n");
-        */
+            /*location part*/
+            mRunManager = RunManager.get(this);
+            mRunManager.startLocationUpdates();
 
-        /*location part*/
-        mRunManager = RunManager.get(this);
-        mRunManager.startLocationUpdates();
-
-        setTitle("Update " + name + "'s status");
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        //.make(view, "Distance is" + StringDistance + "meters", Snackbar.LENGTH_LONG)
-          //      .setAction("Action", null).show();
-        //Toast.makeText(this, "Distance is" + StringDistance + "meters", Toast.LENGTH_LONG).show();
-
-
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                if(!crowded.isChecked() && !notBad.isChecked() && !empty.isChecked()){
-                    Snackbar.make(view, "Must choose one!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-
-
+            userId = getIntent().getStringExtra("userId");
+            setTitle("Update " + name + "'s status");
+            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    tryToVote(view);
                 }
-                else {
-                    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+            });
+        }
 
+    public void tryToVote(final View view){
+        if(atLocation) {
+            ParseQuery<ParseObject> queryZero = ParseQuery.getQuery("Status");
+            queryZero.whereEqualTo("user", userId);
+            Date currentDate = new Date();
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(currentDate);
+            cal.add(Calendar.HOUR, -1);
+            Date date = cal.getTime();
+            queryZero.whereGreaterThanOrEqualTo("updatedAt", date);
+            queryZero.addDescendingOrder("updatedAt");
+            queryZero.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> statusList, ParseException e) {
+                    if (e == null) {
+                        Log.d("statuses", "Retrieved " + statusList.size() + " statuses");
+                        if (statusList.size() != 0) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateLocationActivity.this);
+                            builder.setMessage("You already voted in the past hour!")
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
 
-
-                    mRunManager.stopLocationUpdates();
-                    finish();
+                                        }
+                                    });
+                            builder.create();
+                            builder.show();
+                        } else {
+                            if (!crowded.isChecked() && !notBad.isChecked() && !empty.isChecked()) {
+                                Snackbar.make(view, "Must choose one!", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
+                            } else {
+                                ParseObject statusUpdate = new ParseObject("Status");
+                                statusUpdate.put("location", name);
+                                if (crowded.isChecked()) {
+                                    statusUpdate.put("status", "Crowded");
+                                    status = "Crowded";
+                                } else if (notBad.isChecked()) {
+                                    statusUpdate.put("status", "Manageable");
+                                    status = "Manageable";
+                                } else {
+                                    statusUpdate.put("status", "Empty");
+                                    status = "Empty";
+                                }
+                                statusUpdate.put("user", userId);
+                                statusUpdate.saveInBackground();
+                                //sendNotification();
+                                mRunManager.stopLocationUpdates();
+                                finish();
+                            }
+                        }
+                    }
                 }
-            }
-        });
+            });
+        }
+        else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateLocationActivity.this);
+            builder.setMessage("You are not at this location!")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                        }
+                    });
+            builder.create();
+            builder.show();
+        }
     }
-    /*???*/
+    public void sendNotification () {
+        Intent resultIntent = new Intent(this, ViewLocationActivity.class);
+        resultIntent.putExtra("name", name);
+        resultIntent.putExtra("userId", userId);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.nyutorchtrans)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.nyutenicon))
+                        .setContentTitle("NYUTen")
+                        .setContentText(name + " is now " + status)
+                        .setAutoCancel(true)
+                        .setContentIntent(resultPendingIntent);
+        int mNotificationId = 1;
+        if (name.equals("")) {
 
-
-
+        }
+        NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mNotifyMgr.notify(mNotificationId, mBuilder.build());
+    }
     @Override
-    public void onStop() {
+    public void onStop () {
         this.unregisterReceiver(mLocationReceiver);
         super.onStop();
     }
+
 }

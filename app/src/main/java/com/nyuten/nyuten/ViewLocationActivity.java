@@ -1,48 +1,69 @@
 package com.nyuten.nyuten;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.nyuten.nyuten.Model.mLocation;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class ViewLocationActivity extends AppCompatActivity {
     String name;
+    String userId;
+    String status;
+    ListView statusList;
+    ArrayList<Status> statusCollection = new ArrayList<>();
+    StatusAdapter statusAdapter;
+    SwipeRefreshLayout swipeRefreshLayout;
+    mLocation mLocationCurrent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_location);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#512DA8"));
+        }
         name = getIntent().getStringExtra("name");
-        setTitle(name);
-        if(name.equals("Dibner")){
-            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.dibner);
-            ((TextView)findViewById(R.id.view_content)).setText("The Bern Dibner Library of Science and Technology strives to offer exceptional service by acquiring, organizing, and providing access to information resources, specializing in the fields of science, engineering and technology management. In partnership with faculty, we employ state-of-the-art technologies to support learning, teaching, research and innovation. The Library provides an enriched cultural and social environment that  fosters interdisciplinary collaboration and creativity.");
-        }
-        else if (name.equals("Chipotle")){
-            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.chipotle);
-            ((TextView)findViewById(R.id.view_content)).setText("When Chipotle opened its first restaurant in 1993, the idea was simple: show that food served fast didn't have to be a “fast-food” experience. Using high-quality raw ingredients, classic cooking techniques, and distinctive interior design, we brought features from the realm of fine dining to the world of quick-service restaurants.\n" +
-                    "\n" +
-                    "Over 20 years later, our devotion to finding the very best ingredients we can—with respect for animals, farmers, and the environment—is shown through our Food With Integrity commitment. And as we grow, our dedication to creating an exceptional experience for our customers is the natural result of cultivating a culture of genuine, rewarding opportunities for our employees.");
-        }
-        else{
-            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.gym);
-            ((TextView)findViewById(R.id.view_content)).setText("Located at Six MetroTech Center in downtown Brooklyn, the Brooklyn Athletic Facility features a regulation-sized basketball court, an aerobic fitness room, and a physical fitness room.\n" +
-                    "\n" +
-                    "Located directly inside the Jacobs building, the regulation-sized full court is available for free play basketball, volleyball, and other activities. Free play basketball is based on a challenge system. The court also hosts a number of School of Engineering events, including new student orientation, admissions, and career fairs.\n" +
-                    "\n" +
-                    "The facility previously served as the gym for the Polytechnic Institute of NYU, which officially merged with NYU and became the Polytechnic Schoolof Engineering on January 1, 2014.\n" +
-                    "\n" +
-                    "Located on the lower level of the Jacobs building, this 44' x 63' room contains a diverse set of cardio machines, including upright bikes, recumbent bikes, spin bikes, elliptical cross-trainers, stair steppers, and treadmills. In addition to all of the cardio equipment, the AFR also includes multiple selectorized machines, medicine and plyometric stability balls, yoga mats, foam rollers, and an open area that can be utilized for stretching or individualized exercises.\n" +
-                    "\n" +
-                    "The 62' x 54' Physical Fitness Room hosts all of Brooklyn Athletic Facility's strength and weight training equipment. It includes adjustable benches, free weights ranging from 1lbs to 100lbs, plate-loaded machines, weighted barbells, and combo racks for various weightlifting exercises. The space also includes office space for NYU Athletics staff.");
-        }
+        userId = getIntent().getStringExtra("userId");
+        status = getIntent().getStringExtra("status");
+        mLocationCurrent = getIntent().getParcelableExtra("mLocation");
+        ((TextView)findViewById(R.id.location)).setText(name + "\n" + status);
+        statusList = (ListView)findViewById(R.id.statusList);
+        statusAdapter = new StatusAdapter(this, statusCollection);
+        statusList.setAdapter(statusAdapter);
+        swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.activity_view_swipe_refresh_layout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshStatuses();
+            }
+        });
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,9 +72,133 @@ public class ViewLocationActivity extends AppCompatActivity {
                 //        .setAction("Action", null).show();
                 Intent j = new Intent(ViewLocationActivity.this, UpdateLocationActivity.class);
                 j.putExtra("name", name);
+                j.putExtra("userId", userId);
+                j.putExtra("mLocation", mLocationCurrent);
                 startActivity(j);
+                //finish();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void refreshStatuses(){//Put in background thread - AsyncTask
+        ParseQuery<ParseObject> queryZero = ParseQuery.getQuery("Status");
+        queryZero.whereEqualTo("location", name);
+        Date currentDate = new Date();
+        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.HOUR_OF_DAY,0);
+//        cal.set(Calendar.MINUTE,0);
+//        cal.set(Calendar.SECOND,0);
+//        cal.set(Calendar.MILLISECOND,0);
+        cal.setTime(currentDate);
+        cal.add(Calendar.HOUR, -1);
+        Date date = cal.getTime();
+        queryZero.whereGreaterThanOrEqualTo("updatedAt", date);
+        queryZero.addDescendingOrder("updatedAt");
+        queryZero.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> statusList, ParseException e) {
+                if (e == null) {
+                    Log.d("statuses", "Retrieved " + statusList.size() + " statuses");
+                    if (statusList.size() != 0) {
+                        if (statusList.size() < 4) {
+                            status = statusList.get(0).getString("status");
+                        } else {
+                            int crowded = 0;
+                            int manage = 0;
+                            int empty = 0;
+                            for (int i = 0; i < statusList.size(); i++) {
+                                if (statusList.get(i).getString("status").equals("Crowded")) {
+                                    crowded++;
+                                } else if (statusList.get(i).getString("status").equals("Manageable")) {
+                                    manage++;
+                                } else if (statusList.get(i).getString("status").equals("Empty")) {
+                                    empty++;
+                                }
+                            }
+                            if (crowded >= manage && crowded >= empty) {
+                                status = "Crowded";
+                            } else if (manage >= crowded && manage >= empty) {
+                                status = "Manageable";
+                            } else {
+                                status = "Empty";
+                            }
+                        }
+                    } else {
+                        status = "No Recent Status";
+                    }
+                    ((TextView) findViewById(R.id.location)).setText(name + "\n" + status);
+                }
+            }
+        });
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Status");
+        if(name.equals("Dibner")){
+            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.dibner1);
+            query.whereEqualTo("location", "Dibner");
+        }
+        else if (name.equals("Chipotle")){
+            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.chipotle);
+            query.whereEqualTo("location", "Chipotle");
+        }
+        else if(name.equals("Gym")){
+            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.gym);
+            query.whereEqualTo("location", "Gym");
+        }
+        else{
+            ((ImageView)findViewById(R.id.view_image)).setImageResource(R.drawable.starbucks);
+            query.whereEqualTo("location", "Starbucks");
+        }
+        Calendar cal1 = Calendar.getInstance();
+        cal1.set(Calendar.HOUR_OF_DAY,0);
+        cal1.set(Calendar.MINUTE,0);
+        cal1.set(Calendar.SECOND,0);
+        cal1.set(Calendar.MILLISECOND,0);
+        Date date1 = cal1.getTime();
+        //date.setTime(0);
+        System.out.println(date1.toString());
+        query.whereGreaterThanOrEqualTo("updatedAt", date1);
+        query.addDescendingOrder("updatedAt");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> status, ParseException e) {
+                if (e == null) {
+                    Log.d("statuses", "Retrieved " + status.size() + " statuses");
+                    statusCollection.clear();
+                    if (status.size() == 0) {
+                        statusCollection.add(new Status("No updates posted yet for today", ""));
+                        System.out.println("EMPTY UPDATES");
+                    } else {
+                        for (int i = 0; i < status.size(); i++) {
+                            try {
+                                SimpleDateFormat localDateFormat = new SimpleDateFormat("HH:mm");
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+                                String time = localDateFormat.format(status.get(i).getUpdatedAt());
+                                Date twentyFour = localDateFormat.parse(time);
+                                //System.out.println(twentyFour);
+                                //System.out.println(dateFormat.format(twentyFour));
+                                String finalTime = dateFormat.format(twentyFour);
+                                if (finalTime.startsWith("0")) {
+                                    finalTime = finalTime.substring(1);
+                                }
+                                statusCollection.add(new Status(status.get(i).getString("status"), finalTime));
+                                statusAdapter.notifyDataSetChanged();
+                            } catch (Exception exc) {
+                                exc.printStackTrace();
+                            }
+                        }
+                    }
+                } else {
+                    Log.d("statuses", "Error: " + e.getMessage());
+                }
+            }
+        });
+        statusAdapter.notifyDataSetChanged();
+        if(swipeRefreshLayout.isRefreshing()){
+            swipeRefreshLayout.setRefreshing(false);
+        }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+       refreshStatuses();
     }
 }

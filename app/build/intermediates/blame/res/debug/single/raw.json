@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
-        "source": "/Users/andylin/Desktop/Nowadays/Mobile Application Programming/NYUTen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/res/raw/gtm_analytics"
-    },
-    {
-        "merged": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
-        "source": "/Volumes/Seagate Backup Plus Drive/NYUTen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/res/raw/gtm_analytics"
+        "merged": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
+        "source": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.3.0\\res\\raw\\gtm_analytics"
     }
 ]

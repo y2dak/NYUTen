@@ -6,11 +6,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+
+import java.util.ArrayList;
 
 public class GcmIntentService2 extends IntentService{
     public GcmIntentService2(){
@@ -30,27 +33,41 @@ public class GcmIntentService2 extends IntentService{
         Log.d("GcmIntentService2", "onhandle intent");
         Bundle extras=intent.getExtras();
         String message=intent.getStringExtra("message");
-        GoogleCloudMessaging gcm=GoogleCloudMessaging.getInstance(this);
-        String messageType=gcm.getMessageType(intent);
-        if(extras!=null&&!extras.isEmpty()&& GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)){
+        if(message != null) {
+            String[] splits = message.split(" ");
+            int id = 0;
+            System.out.println("splits[0]: " + splits[0]);
+            if (splits[0].equals("Dibner")) {
+                id = 1;
+            } else if (splits[0].equals("Gym")) {
+                id = 2;
+            } else if (splits[0].equals("Starbucks")) {
+                id = 3;
+            }
+            System.out.println("notification id: " + id);
+            GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
+            String messageType = gcm.getMessageType(intent);
+            if (extras != null && !extras.isEmpty() && GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
 
-            NotificationManager mNotificationManager = (NotificationManager)
-                    getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager mNotificationManager = (NotificationManager)
+                        getSystemService(Context.NOTIFICATION_SERVICE);
 
-            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                    new Intent(this, MainActivity.class), PendingIntent.FLAG_ONE_SHOT);
+                PendingIntent contentIntent = PendingIntent.getActivity(this, id,
+                        new Intent(this, MainActivity.class), PendingIntent.FLAG_ONE_SHOT);
 
-            NotificationCompat.Builder mBuilder =
-                    new NotificationCompat.Builder(this)
-                            .setSmallIcon(R.mipmap.ic_launcher)
-                            .setContentTitle("NYU Ten")
-                            .setStyle(new NotificationCompat.BigTextStyle()
-                                    .bigText(message))
-                            .setContentText(message).setContentIntent(contentIntent).setAutoCancel(true);
+                NotificationCompat.Builder mBuilder =
+                        new NotificationCompat.Builder(this)
+                                .setSmallIcon(R.drawable.nyutorchtrans)
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.nyutenicon))
+                                .setContentTitle("NYU Ten")
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText(message))
+                                .setContentText(message).setContentIntent(contentIntent).setAutoCancel(true);
 
-            mBuilder.setContentIntent(contentIntent);
-            mNotificationManager.notify(0, mBuilder.build());
+                mBuilder.setContentIntent(contentIntent);
+                mNotificationManager.notify(id, mBuilder.build());
 
+            }
         }
         GcmBroadcastReceiver.completeWakefulIntent(intent);
     }

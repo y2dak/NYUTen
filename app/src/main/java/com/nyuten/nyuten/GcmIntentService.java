@@ -1,29 +1,21 @@
 package com.nyuten.nyuten;
 
+/**
+ * Created by yatin_000 on 5/8/2016.
+ */
 
 import android.app.IntentService;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
 
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Base64;
-import android.util.Log;
-
-
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,21 +26,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.Buffer;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Date;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-
 
 public class GcmIntentService extends IntentService {
     private String token;
@@ -77,14 +56,14 @@ public class GcmIntentService extends IntentService {
         Intent regComplete=null;
         token=null;
         try {
-                InstanceID instanceID = InstanceID.getInstance(this);
-                token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
-                        GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
-                Log.d("token is ", token);
-                Log.d("sender id", getString(R.string.gcm_defaultSenderId));
-                regComplete=new Intent(REGISTRATION_SUCCESS);
-                regComplete.putExtra("token",token);
-                sendRegistrationToServer(token);
+            InstanceID instanceID = InstanceID.getInstance(this);
+            token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
+                    GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+            Log.d("token is ", token);
+            Log.d("sender id", getString(R.string.gcm_defaultSenderId));
+            regComplete=new Intent(REGISTRATION_SUCCESS);
+            regComplete.putExtra("token",token);
+            sendRegistrationToServer(token);
 
         } catch (IOException e) {
             e.printStackTrace();
