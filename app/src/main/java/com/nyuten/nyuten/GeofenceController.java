@@ -80,7 +80,7 @@ public class GeofenceController {
     this.namedGeofenceToAdd = namedGeofence;
     this.geofenceToAdd = namedGeofence.geofence();
 
-    connectWithCallbacks1(connectionAddListener1);
+    connectWithCallbacks(connectionAddListener);
   }
 
   // endregion
@@ -102,7 +102,7 @@ public class GeofenceController {
   }
 
 
-  private void connectWithCallbacks1(GoogleApiClient.ConnectionCallbacks callbacks) {
+  private void connectWithCallbacks(GoogleApiClient.ConnectionCallbacks callbacks) {
     System.out.println("private void connectWithCallbacks1(GoogleApiClient.ConnectionCallbacks callbacks)");
     googleApiClient1 = new GoogleApiClient.Builder(context)
             .addApi(LocationServices.API)
@@ -110,36 +110,6 @@ public class GeofenceController {
             .addOnConnectionFailedListener(connectionFailedListener)
             .build();
     googleApiClient1.connect();
-  }
-
-  private void connectWithCallbacks2(GoogleApiClient.ConnectionCallbacks callbacks) {
-    System.out.println("private void connectWithCallbacks2(GoogleApiClient.ConnectionCallbacks callbacks)");
-    googleApiClient2 = new GoogleApiClient.Builder(context)
-            .addApi(LocationServices.API)
-            .addConnectionCallbacks(callbacks)
-            .addOnConnectionFailedListener(connectionFailedListener)
-            .build();
-    googleApiClient2.connect();
-  }
-
-  private void connectWithCallbacks3(GoogleApiClient.ConnectionCallbacks callbacks) {
-    System.out.println("private void connectWithCallbacks3(GoogleApiClient.ConnectionCallbacks callbacks)");
-    googleApiClient3 = new GoogleApiClient.Builder(context)
-            .addApi(LocationServices.API)
-            .addConnectionCallbacks(callbacks)
-            .addOnConnectionFailedListener(connectionFailedListener)
-            .build();
-    googleApiClient3.connect();
-  }
-
-  private void connectWithCallbacks4(GoogleApiClient.ConnectionCallbacks callbacks) {
-    System.out.println("private void connectWithCallbacks4(GoogleApiClient.ConnectionCallbacks callbacks)");
-    googleApiClient4 = new GoogleApiClient.Builder(context)
-            .addApi(LocationServices.API)
-            .addConnectionCallbacks(callbacks)
-            .addOnConnectionFailedListener(connectionFailedListener)
-            .build();
-    googleApiClient4.connect();
   }
 
   private GeofencingRequest getAddGeofencingRequest() {
@@ -188,7 +158,7 @@ public class GeofenceController {
 
   // region ConnectionCallbacks
 
-  private GoogleApiClient.ConnectionCallbacks connectionAddListener1 = new GoogleApiClient.ConnectionCallbacks() {
+  private GoogleApiClient.ConnectionCallbacks connectionAddListener = new GoogleApiClient.ConnectionCallbacks() {
     @Override
     public void onConnected(Bundle bundle) {
       System.out.println("GREAT SUCCESS!");
@@ -246,88 +216,6 @@ public class GeofenceController {
       sendError();
     }
   };
-
-  private GoogleApiClient.ConnectionCallbacks connectionAddListener2 = new GoogleApiClient.ConnectionCallbacks() {
-    @Override
-    public void onConnected(Bundle bundle) {
-      System.out.println("GREAT SUCCESS!");
-      Intent intent = new Intent(context, GeofenceIntentService.class);
-      PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-      PendingResult<Status> result = LocationServices.GeofencingApi.addGeofences(googleApiClient2, getAddGeofencingRequest(), pendingIntent);
-      result.setResultCallback(new ResultCallback<Status>() {
-        @Override
-        public void onResult(Status status) {
-          if (status.isSuccess()) {
-            saveGeofence();
-          } else {
-            Log.e(TAG, "Registering geofence failed: " + status.getStatusMessage() + " : " + status.getStatusCode());
-            sendError();
-          }
-        }
-      });
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-      Log.e(TAG, "Connecting to GoogleApiClient suspended.");
-      sendError();
-    }
-  };
-
-  private GoogleApiClient.ConnectionCallbacks connectionAddListener3 = new GoogleApiClient.ConnectionCallbacks() {
-    @Override
-    public void onConnected(Bundle bundle) {
-      System.out.println("GREAT SUCCESS!");
-      Intent intent = new Intent(context, GeofenceIntentService.class);
-      PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-      PendingResult<Status> result = LocationServices.GeofencingApi.addGeofences(googleApiClient3, getAddGeofencingRequest(), pendingIntent);
-      result.setResultCallback(new ResultCallback<Status>() {
-        @Override
-        public void onResult(Status status) {
-          if (status.isSuccess()) {
-            saveGeofence();
-          } else {
-            Log.e(TAG, "Registering geofence failed: " + status.getStatusMessage() + " : " + status.getStatusCode());
-            sendError();
-          }
-        }
-      });
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-      Log.e(TAG, "Connecting to GoogleApiClient suspended.");
-      sendError();
-    }
-  };
-
-  private GoogleApiClient.ConnectionCallbacks connectionAddListener4 = new GoogleApiClient.ConnectionCallbacks() {
-    @Override
-    public void onConnected(Bundle bundle) {
-      System.out.println("GREAT SUCCESS!");
-      Intent intent = new Intent(context, GeofenceIntentService.class);
-      PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-      PendingResult<Status> result = LocationServices.GeofencingApi.addGeofences(googleApiClient4, getAddGeofencingRequest(), pendingIntent);
-      result.setResultCallback(new ResultCallback<Status>() {
-        @Override
-        public void onResult(Status status) {
-          if (status.isSuccess()) {
-            saveGeofence();
-          } else {
-            Log.e(TAG, "Registering geofence failed: " + status.getStatusMessage() + " : " + status.getStatusCode());
-            sendError();
-          }
-        }
-      });
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-      Log.e(TAG, "Connecting to GoogleApiClient suspended.");
-      sendError();
-    }
-  };
-
   // endregion
 
   // region OnConnectionFailedListener
