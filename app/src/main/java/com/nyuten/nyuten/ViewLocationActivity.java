@@ -85,10 +85,6 @@ public class ViewLocationActivity extends AppCompatActivity {
         queryZero.whereEqualTo("location", name);
         Date currentDate = new Date();
         Calendar cal = Calendar.getInstance();
-//        cal.set(Calendar.HOUR_OF_DAY,0);
-//        cal.set(Calendar.MINUTE,0);
-//        cal.set(Calendar.SECOND,0);
-//        cal.set(Calendar.MILLISECOND,0);
         cal.setTime(currentDate);
         cal.add(Calendar.HOUR, -1);
         Date date = cal.getTime();

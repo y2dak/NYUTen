@@ -127,9 +127,10 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
     Marker currentMarker = null;
 
 
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        GeofenceController.getInstance().init(this);
         sharedPreferences = getSharedPreferences("nyutencredz", MODE_PRIVATE);
         statuses = getSharedPreferences("nyutenstatuses", MODE_PRIVATE);
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -139,6 +140,12 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+        NamedGeofence geofence = new NamedGeofence();
+        geofence.name = "Campus";
+        geofence.latitude = 40.694242;
+        geofence.longitude = -73.986148;
+        geofence.radius = 1 * 1000.0f;
+        GeofenceController.getInstance().addGeofence(geofence);//keeps adding every time app is started
         try {
             Parse.initialize(this, "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP", "f0MCDv8IMKdKZTMpnV6oXELDwTG12wSv8F4y6q8T");
         }

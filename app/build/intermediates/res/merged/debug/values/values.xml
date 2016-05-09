@@ -300,6 +300,7 @@
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="google_play_services_version">8298000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Notification.Text">You\'re on %1$s! Mind updating a location\'s status?</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>

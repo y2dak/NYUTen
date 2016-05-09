@@ -67,13 +67,13 @@ public class UpdateLocationActivity extends AppCompatActivity {
 
             Location.distanceBetween(loc.getLatitude(), loc.getLongitude(), mLocCurrent.getLat(), mLocCurrent.getLng(), distance);
             StringDistance =Float.toString(distance[0]);
-            if (distance[0] < 5){
+            if (distance[0] < 50){
                 atLocation = true;
                 atLocationtTxt.setText("You are at this location!");
             }
             System.out.println("in the UpdateLocation class, the distance between from current to is " + StringDistance + "\n");
 
-            Toast.makeText(getApplication(), "Current distance from " + mLocCurrent.getLocation() + " is\n" + StringDistance + " meters", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplication(), "Current distance from " + mLocCurrent.getLocation() + " is\n" + StringDistance + " meters", Toast.LENGTH_LONG).show();
         }
         @Override
         protected void onProviderEnabledChanged(boolean enabled)
@@ -122,6 +122,7 @@ public class UpdateLocationActivity extends AppCompatActivity {
         if(atLocation) {
             ParseQuery<ParseObject> queryZero = ParseQuery.getQuery("Status");
             queryZero.whereEqualTo("user", userId);
+            queryZero.whereEqualTo("location", name);
             Date currentDate = new Date();
             Calendar cal = Calendar.getInstance();
             cal.setTime(currentDate);
@@ -182,26 +183,6 @@ public class UpdateLocationActivity extends AppCompatActivity {
             builder.create();
             builder.show();
         }
-    }
-    public void sendNotification () {
-        Intent resultIntent = new Intent(this, ViewLocationActivity.class);
-        resultIntent.putExtra("name", name);
-        resultIntent.putExtra("userId", userId);
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.nyutorchtrans)
-                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.nyutenicon))
-                        .setContentTitle("NYUTen")
-                        .setContentText(name + " is now " + status)
-                        .setAutoCancel(true)
-                        .setContentIntent(resultPendingIntent);
-        int mNotificationId = 1;
-        if (name.equals("")) {
-
-        }
-        NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }
     @Override
     public void onStop () {

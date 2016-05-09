@@ -115,6 +115,9 @@
             android:label="@string/title_activity_update_location"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+        <service android:name="com.nyuten.nyuten.GeofenceIntentService" />
+
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

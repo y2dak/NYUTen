@@ -631,10 +631,10 @@ public final class R {
 		public static final int mr_media_route_chooser_searching = 0x7f070034;
 		public static final int mr_media_route_chooser_title = 0x7f070035;
 		public static final int mr_media_route_controller_disconnect = 0x7f070036;
-		public static final int mr_media_route_controller_pause = 0x7f070051;
-		public static final int mr_media_route_controller_play = 0x7f070052;
-		public static final int mr_media_route_controller_settings_description = 0x7f070053;
-		public static final int mr_media_route_controller_stop = 0x7f070054;
+		public static final int mr_media_route_controller_pause = 0x7f070052;
+		public static final int mr_media_route_controller_play = 0x7f070053;
+		public static final int mr_media_route_controller_settings_description = 0x7f070054;
+		public static final int mr_media_route_controller_stop = 0x7f070055;
 		public static final int mr_system_route_name = 0x7f070037;
 		public static final int mr_user_route_category_name = 0x7f070038;
 		public static final int status_bar_notification_info_overflow = 0x7f070039;

@@ -106,4 +106,5 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_update_location">UpdateLocationActivity</string>
+    <string name="Notification.Text">You\'re on %1$s! Mind updating a location\'s status?</string>
 </resources>
