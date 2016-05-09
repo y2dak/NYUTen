@@ -14,7 +14,7 @@ class MainHandler(webapp2.RequestHandler):
                 #sends mesaage to gcm server, takes in string param
                 def sendMessage(mes):
                         regIDS=[]
-                        data={"message": mes}
+                        data={"message": "FROM SERVER "+mes}
                         headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
                         result=urlfetch.fetch(
                             url="https://api.parse.com/1/classes/RegistrationIds",
@@ -29,12 +29,13 @@ class MainHandler(webapp2.RequestHandler):
                                 regIDS.append(add)
                         try:
                             form_data={"registration_ids":regIDS,"data":data}
-                            headers={"Content-Type": "application/json", "Authorization": "key=AIzaSyCGycv7arPP3Re3ts1O7q7paaB5FZJGtxk"}
+                            headers={"Content-Type": "application/json", "Authorization": "key=AIzaSyCrTeR6MVW3eKBQxknOcpWrnNlI2CSJqng"}
                             result=urlfetch.fetch(
                                     url="https://android.googleapis.com/gcm/send",
                                     payload=json.dumps(form_data),
                                     method=urlfetch.POST,
                                     headers=headers)
+
                         except urlfetch.Error:
                             logging.exception('Caught exception fetching url')
                             
@@ -49,6 +50,7 @@ class MainHandler(webapp2.RequestHandler):
                                         }
                                 }
                         })})
+                
                 #send the get request to parse database
                 headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
                 result=urlfetch.fetch(
@@ -56,6 +58,13 @@ class MainHandler(webapp2.RequestHandler):
                     payload='',
                     method=urlfetch.GET,
                     headers=headers)
+                lastMessage=urlfetch.fetch(
+                    url="https://api.parse.com/1/classes/LatestNotification",
+                    payload='',
+                    method=urlfetch.GET,
+                    headers=headers)
+                lastMes=json.loads(lastMessage.content)
+                mesArr=lastMes["results"]
                 self.response.write(json.dumps(result.content))
                 res=json.loads(result.content)
                 resArr=res["results"]
@@ -103,36 +112,157 @@ class MainHandler(webapp2.RequestHandler):
                                         dibManageCount+=1
                                 elif x['status']=='Empty':
                                         dibEmptyCount+=1
+                chMessage=''
+                stMessage=''
+                gymMessage=''
+                dibMessage=''
                 #if the status for each location is the most common and over 3 votes, add it to message
                 if chCrowdedCount>chManageCount and chCrowdedCount>chEmptyCount and chCrowdedCount>=3:
-                        message+="Chipotle is currently crowded\n"
+                        chMessage="Chipotle is currently crowded"
                 elif chManageCount>chCrowdedCount and chManageCount>chEmptyCount and chManageCount>=3:
-                        message+="Chipotle is currently manageable\n"
+                        chMessage="Chipotle is currently manageable"
                 elif chEmptyCount>chCrowdedCount and chEmptyCount>chManageCount and chEmptyCount>=3:
-                        message+="Chipotle is currently empty\n"
+                        chMessage="Chipotle is currently empty"
                 if stCrowdedCount>stManageCount and stCrowdedCount>stEmptyCount and stCrowdedCount>=3:
-                        message+="Starbucks is currently crowded\n"
+                        stMessage="Starbucks is currently crowded"
                 elif stManageCount>stCrowdedCount and stManageCount>stEmptyCount and stManageCount>=3:
-                        message+="Starbucks is currently manageable\n"
+                        stMessage="Starbucks is currently manageable"
                 elif stEmptyCount>stCrowdedCount and stEmptyCount>stManageCount and stEmptyCount>=3:
-                        message+="Starbucks is currently empty\n"
+                        stMessage="Starbucks is currently empty"
                 if gymCrowdedCount>gymManageCount and gymCrowdedCount>gymEmptyCount and gymCrowdedCount>=3:
-                        message+="Gym is currently crowded\n"
+                        gymMessage="Gym is currently crowded"
                 elif gymManageCount>gymCrowdedCount and gymManageCount>gymEmptyCount and gymManageCount>=3:
-                        message+="Gym is currently manageable\n"
+                        gymMessage="Gym is currently manageable"
                 elif gymEmptyCount>gymCrowdedCount and gymEmptyCount>gymManageCount and gymEmptyCount>=3:
-                        message+="Gym is currently empty\n"
+                        gymMessage="Gym is currently empty"
                 if dibCrowdedCount>dibManageCount and dibCrowdedCount>dibEmptyCount and dibCrowdedCount>=3:
-                        message+="Dibner is currently crowded\n"
+                        dibMessage+="Dibner is currently crowded"
                 elif dibManageCount>dibCrowdedCount and dibManageCount>dibEmptyCount and dibManageCount>=3:
-                        message+="Dibner is currently manageable\n"
+                        dibMessage="Dibner is currently manageable"
                 elif dibEmptyCount>dibCrowdedCount and dibEmptyCount>dibManageCount and dibEmptyCount>=3:
-                        message+="Dibner is currently empty\n"
-                #if there is a message send it to gcm 
-                if message!="":
-                        sendMessage(message)
+                        dibMessage="Dibner is currently empty"
+                #loop through messages array
+                for m in mesArr:
+                        #check location and check if the message is the same as the previous notification
+                        #if not, send the message to GCM
+                        if m['location']=="Chipotle":
+
+                                if m['message']!=chMessage and chMessage!='':
+                                        sendMessage(chMessage)
+                                        params = urllib.urlencode({"where":json.dumps({
+                                                "location": "Chipotle"
+                                                })})
+                                        headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification?%s" % params,
+                                                payload='',
+                                                method=urlfetch.GET,
+                                                headers=headers)
+                                        res=json.loads(result.content)
+                                        resArr=res["results"]
+                                        #delete the last notification in parse db
+                                        for x in resArr:
+
+                                                objID=x["objectId"]
+                                                urlfetch.fetch(
+                                                        url="https://api.parse.com/1/classes/LatestNotification/"+objID,
+                                                        payload='',
+                                                        method=urlfetch.DELETE,
+                                                        headers=headers)
+                                        form_data={"message":chMessage,"location":"Chipotle"}
+                                        #add new notification to parse db
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification",
+                                                payload=json.dumps(form_data),
+                                                method=urlfetch.POST,
+                                                headers=headers)
+                        #do the same 
+                        if m['location']=="Dibner":
+                                if m['message']!=dibMessage and dibMessage!='':
+                                        sendMessage(dibMessage)
+                                        params = urllib.urlencode({"where":json.dumps({
+                                                "location": "Dibner"
+                                                })})
+                                        headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
+                                        dibResult=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification?%s" % params,
+                                                payload='',
+                                                method=urlfetch.GET,
+                                                headers=headers)
+                                        dibres=json.loads(dibResult.content)
+                                        dibresArr=dibres["results"]
 
 
+                                        for x in dibresArr:
+                                                objID=x["objectId"]
+                                                urlfetch.fetch(
+                                                        url="https://api.parse.com/1/classes/LatestNotification/"+objID,
+                                                        payload='',
+                                                        method=urlfetch.DELETE,
+                                                        headers=headers)
+                                        form_data={"message":dibMessage,"location":"Dibner"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification",
+                                                payload=json.dumps(form_data),
+                                                method=urlfetch.POST,
+                                                headers=headers)
+                        if m['location']=="Starbucks":
+                                if m['message']!=stMessage and stMessage!='':
+                                        sendMessage(stMessage)
+                                        params = urllib.urlencode({"where":json.dumps({
+                                                "location": "Starbucks"
+                                                })})
+                                        headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification?%s" % params,
+                                                payload='',
+                                                method=urlfetch.GET,
+                                                headers=headers)
+                                        res=json.loads(result.content)
+                                        resArr=res["results"]
+                                        for x in resArr:
+                                                objID=x["objectId"]
+                                                urlfetch.fetch(
+                                                        url="https://api.parse.com/1/classes/LatestNotification/"+objID,
+                                                        payload='',
+                                                        method=urlfetch.DELETE,
+                                                        headers=headers)
+                                        form_data={"message":stMessage,"location":"Starbucks"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification",
+                                                payload=json.dumps(form_data),
+                                                method=urlfetch.POST,
+                                                headers=headers)
+                        if m['location']=="Gym":
+                                if m['message']!=gymMessage and gymMessage!='':
+                                        sendMessage(gymMessage)
+                                        params = urllib.urlencode({"where":json.dumps({
+                                                "location": "Gym"
+                                                })})
+                                        headers={"X-Parse-Application-Id": "M1xTL6HzyegVSmshU1NgFbai5VTn07aOMSFmFgvP","X-Parse-REST-API-Key":"cXjwfdojQyN4qQNrh8W7cXOeLgsmJ19dhXs42fz3"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification?%s" % params,
+                                                payload='',
+                                                method=urlfetch.GET,
+                                                headers=headers)
+                                        res=json.loads(result.content)
+                                        resArr=res["results"]
+        
+                                        for x in resArr:
+                                                objID=x["objectId"]
+                                                urlfetch.fetch(
+                                                        url="https://api.parse.com/1/classes/LatestNotification/"+objID,
+                                                        payload='',
+                                                        method=urlfetch.DELETE,
+                                                        headers=headers)
+                                        form_data={"message":gymMessage,"location":"Gym"}
+                                        result=urlfetch.fetch(
+                                                url="https://api.parse.com/1/classes/LatestNotification",
+                                                payload=json.dumps(form_data),
+                                                method=urlfetch.POST,
+                                                headers=headers)                       
+                        
+                        
 
 	def post(self):
 		logging.info("Received POST: " + self.request.body)
@@ -195,7 +325,7 @@ class MainHandler(webapp2.RequestHandler):
                                         #send post request to gcm server 
                                         try:
                                             form_data={"registration_ids":regIDS,"data":data}
-                                            headers={"Content-Type": "application/json", "Authorization": "key=AIzaSyCGycv7arPP3Re3ts1O7q7paaB5FZJGtxk"}
+                                            headers={"Content-Type": "application/json", "Authorization": "key=AIzaSyCrTeR6MVW3eKBQxknOcpWrnNlI2CSJqng"}
                                             result=urlfetch.fetch(
                                                     url="https://android.googleapis.com/gcm/send",
                                                     payload=json.dumps(form_data),
