@@ -67,7 +67,7 @@ public class UpdateLocationActivity extends AppCompatActivity {
 
             Location.distanceBetween(loc.getLatitude(), loc.getLongitude(), mLocCurrent.getLat(), mLocCurrent.getLng(), distance);
             StringDistance =Float.toString(distance[0]);
-            if (distance[0] < 50){
+            if (distance[0] < 90){
                 atLocation = true;
                 atLocationtTxt.setText("You are at this location!");
             }
@@ -119,6 +119,7 @@ public class UpdateLocationActivity extends AppCompatActivity {
         }
 
     public void tryToVote(final View view){
+        atLocation = true;
         if(atLocation) {
             ParseQuery<ParseObject> queryZero = ParseQuery.getQuery("Status");
             queryZero.whereEqualTo("user", userId);
@@ -134,17 +135,17 @@ public class UpdateLocationActivity extends AppCompatActivity {
                 public void done(List<ParseObject> statusList, ParseException e) {
                     if (e == null) {
                         Log.d("statuses", "Retrieved " + statusList.size() + " statuses");
-                        if (statusList.size() != 0) {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateLocationActivity.this);
-                            builder.setMessage("You already voted in the past hour!")
-                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int id) {
-
-                                        }
-                                    });
-                            builder.create();
-                            builder.show();
-                        } else {
+//                        if (statusList.size() != 0) {
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateLocationActivity.this);
+//                            builder.setMessage("You already voted in the past hour!")
+//                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                                        public void onClick(DialogInterface dialog, int id) {
+//
+//                                        }
+//                                    });
+//                            builder.create();
+//                            builder.show();
+//                        } else {
                             if (!crowded.isChecked() && !notBad.isChecked() && !empty.isChecked()) {
                                 Snackbar.make(view, "Must choose one!", Snackbar.LENGTH_LONG)
                                         .setAction("Action", null).show();
@@ -168,7 +169,7 @@ public class UpdateLocationActivity extends AppCompatActivity {
                                 finish();
                             }
                         }
-                    }
+                    //}
                 }
             });
         }

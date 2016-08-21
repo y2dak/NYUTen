@@ -86,10 +86,10 @@ public class GeofenceIntentService extends IntentService {
 
       // Set the notification text and send the notification
       String contextText = String.format(this.getResources().getString(R.string.Notification_Text), geofenceName);
-      int id = 0;
-      if(geofenceName.equals("Dibner")) id = 1;
-      if(geofenceName.equals("Starbucks")) id = 2;
-      if(geofenceName.equals("Chipotle")) id = 3;
+      int id = 5;
+//      if(geofenceName.equals("Dibner")) id = 1;
+//      if(geofenceName.equals("Starbucks")) id = 2;
+//      if(geofenceName.equals("Chipotle")) id = 3;
       NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
       Intent intent = new Intent(this, MainActivity.class);
       intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);

@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
 
 
         if(checkPlayServices()){
-            Intent intent=new Intent(this,GcmIntentService.class);
+            Intent intent=new Intent(this, GcmIntentService.class);
             startService(intent);
         }
 //        LocationServices.GeofencingApi.addGeofences(
@@ -767,28 +767,28 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
     @Override
     public void onResume(){
         super.onResume();
-        if(currentMarker != null){
-            if(currentMarker.getTitle().equals("Dibner")){
-                currentLocation = "Dibner";
-                markerInfo.setVisibility(View.VISIBLE);
-                markerTitle.setText("Dibner: " + dibnerStat);
-            }
-            else if(currentMarker.getTitle().equals("Chipotle")){
-                currentLocation = "Chipotle";
-                markerInfo.setVisibility(View.VISIBLE);
-                markerTitle.setText("Chipotle: " + chipotleStat);
-            }
-            else if(currentMarker.getTitle().equals("Gym")){
-                currentLocation = "Gym";
-                markerInfo.setVisibility(View.VISIBLE);
-                markerTitle.setText("Gym: " + gymStat);
-            }
-            else{
-                currentLocation = "Starbucks";
-                markerInfo.setVisibility(View.VISIBLE);
-                markerTitle.setText("Starbucks: " + starbucksStat);
-            }
-        }
+//        if(currentMarker != null){
+//            if(currentMarker.getTitle().equals("Dibner")){
+//                currentLocation = "Dibner";
+//                markerInfo.setVisibility(View.VISIBLE);
+//                markerTitle.setText("Dibner: " + dibnerStat);
+//            }
+//            else if(currentMarker.getTitle().equals("Chipotle")){
+//                currentLocation = "Chipotle";
+//                markerInfo.setVisibility(View.VISIBLE);
+//                markerTitle.setText("Chipotle: " + chipotleStat);
+//            }
+//            else if(currentMarker.getTitle().equals("Gym")){
+//                currentLocation = "Gym";
+//                markerInfo.setVisibility(View.VISIBLE);
+//                markerTitle.setText("Gym: " + gymStat);
+//            }
+//            else{
+//                currentLocation = "Starbucks";
+//                markerInfo.setVisibility(View.VISIBLE);
+//                markerTitle.setText("Starbucks: " + starbucksStat);
+//            }
+//        }
         if(markerInfo != null) {
             markerInfo.setVisibility(View.INVISIBLE);
         }

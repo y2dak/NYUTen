@@ -29,10 +29,7 @@ public class GeofenceController {
   private final String TAG = GeofenceController.class.getName();
 
   private Context context;
-  private GoogleApiClient googleApiClient1;
-  private GoogleApiClient googleApiClient2;
-  private GoogleApiClient googleApiClient3;
-  private GoogleApiClient googleApiClient4;
+  private GoogleApiClient googleApiClient;
 
   private Gson gson;
   private SharedPreferences prefs;
@@ -104,12 +101,12 @@ public class GeofenceController {
 
   private void connectWithCallbacks(GoogleApiClient.ConnectionCallbacks callbacks) {
     System.out.println("private void connectWithCallbacks1(GoogleApiClient.ConnectionCallbacks callbacks)");
-    googleApiClient1 = new GoogleApiClient.Builder(context)
+    googleApiClient = new GoogleApiClient.Builder(context)
             .addApi(LocationServices.API)
             .addConnectionCallbacks(callbacks)
             .addOnConnectionFailedListener(connectionFailedListener)
             .build();
-    googleApiClient1.connect();
+    googleApiClient.connect();
   }
 
   private GeofencingRequest getAddGeofencingRequest() {
@@ -164,7 +161,7 @@ public class GeofenceController {
       System.out.println("GREAT SUCCESS!");
       Intent intent = new Intent(context, GeofenceIntentService.class);
       PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-      PendingResult<Status> result = LocationServices.GeofencingApi.addGeofences(googleApiClient1, getAddGeofencingRequest(), pendingIntent);
+      PendingResult<Status> result = LocationServices.GeofencingApi.addGeofences(googleApiClient, getAddGeofencingRequest(), pendingIntent);
       result.setResultCallback(new ResultCallback<Status>() {
         @Override
         public void onResult(Status status) {
@@ -195,7 +192,7 @@ public class GeofenceController {
       }
 
       if (removeIds.size() > 0) {
-        PendingResult<Status> result = LocationServices.GeofencingApi.removeGeofences(googleApiClient1, removeIds);
+        PendingResult<Status> result = LocationServices.GeofencingApi.removeGeofences(googleApiClient, removeIds);
         result.setResultCallback(new ResultCallback<Status>() {
           @Override
           public void onResult(Status status) {
