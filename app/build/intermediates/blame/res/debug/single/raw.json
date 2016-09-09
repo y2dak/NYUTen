@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
-        "source": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.3.0\\res\\raw\\gtm_analytics"
-    },
-    {
         "merged": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
         "source": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.3.0\\res\\raw\\gtm_analytics"
+    },
+    {
+        "merged": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
+        "source": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.3.0\\res\\raw\\gtm_analytics"
     }
 ]

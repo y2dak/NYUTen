@@ -620,21 +620,22 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMapCl
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             GoogleSignInAccount acct = result.getSignInAccount();
-            String personName = acct.getDisplayName();
-            System.out.println(personName);
-            String personEmail = acct.getEmail();
-            System.out.println(personEmail);
-            String personId = acct.getId();
-            System.out.println(personId);
-            Uri personPhoto = acct.getPhotoUrl();
-            System.out.println(personPhoto);
-            if(personEmail.endsWith("@nyu.edu")) {
-                email = personEmail;
-                handleSignInResult(result);
-            }
-            else{
-                Toast.makeText(MainActivity.this, "Must sign in with NYU email!", Toast.LENGTH_SHORT).show();
-                signOut();
+            if (acct != null) {
+                String personName = acct.getDisplayName();
+                System.out.println(personName);
+                String personEmail = acct.getEmail();
+                System.out.println(personEmail);
+                String personId = acct.getId();
+                System.out.println(personId);
+                Uri personPhoto = acct.getPhotoUrl();
+                System.out.println(personPhoto);
+                if (personEmail.endsWith("@nyu.edu")) {
+                    email = personEmail;
+                    handleSignInResult(result);
+                } else {
+                    Toast.makeText(MainActivity.this, "Must sign in with NYU email!", Toast.LENGTH_SHORT).show();
+                    signOut();
+                }
             }
         }
     }

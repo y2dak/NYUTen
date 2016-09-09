@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
         "merged": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
         "source": "C:\\Users\\yatin_000\\Dropbox\\School Work Spring 2016\\Android Programming\\NYUTen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\yatin_000\\Documents\\NYUTenGit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
     }
 ]
